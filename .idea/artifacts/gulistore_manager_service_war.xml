@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="gulistore-manager-service:war">
+    <output-path>$PROJECT_DIR$/gulistore-manager-service/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>gulistore-manager-service</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="gulistore-manager-service-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="gulistore-manager-service:war exploded" />
+    </root>
+  </artifact>
+</component>

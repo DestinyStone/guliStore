@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="gulistore-manager-service" />
+        <module name="gulistore-manager-controller" />
+        <module name="gulistore-api" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="gulistore-api" target="1.8" />
+      <module name="gulistore-controller-util" target="1.8" />
+      <module name="gulistore-manager-controller" target="1.8" />
+      <module name="gulistore-manager-service" target="1.8" />
+      <module name="gulistore-parent" target="1.8" />
+      <module name="gulistore-service-util" target="1.8" />
+      <module name="gulistore-util" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="gulistore-api" options="-parameters" />
+      <module name="gulistore-controller-util" options="-parameters" />
+      <module name="gulistore-manager-controller" options="-parameters" />
+      <module name="gulistore-manager-service" options="-parameters" />
+      <module name="gulistore-service-util" options="-parameters" />
+      <module name="gulistore-util" options="-parameters" />
+    </option>
+  </component>
+</project>
