@@ -19,4 +19,5 @@ public class PmsBaseCatalog1ServiceImpl implements PmsBaseCatalog1Service {
     public List<PmsBaseCatalog1> selectCatalog1() {
         return pmsBaseCatalog1Mapper.selectAll();
     }
+
 }

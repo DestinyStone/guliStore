@@ -43,13 +43,14 @@
         <jsoup.version>1.11.2</jsoup.version>
         <httpclient.version>4.5.5</httpclient.version>
         <commons-lang3.version>3.7</commons-lang3.version>
-        <mapper-starter.version>1.2.3</mapper-starter.version>
+        <mapper-starter.version>2.0.4</mapper-starter.version>
         <jedis.version>2.9.0</jedis.version>
         <jest.version>5.3.3</jest.version>
         <jna.version>4.5.1</jna.version>
         <beanUtils.version>1.9.3</beanUtils.version>
         <fastdfs-client.version>1.26.1-RELEASE</fastdfs-client.version>
         <redisson.version>3.8.2</redisson.version>
+        <swagger.version>2.9.2</swagger.version>
     </properties>
 
     <dependencyManagement>
@@ -196,6 +197,17 @@
                 <groupId>org.redisson</groupId>
                 <artifactId>redisson-spring-boot-starter</artifactId>
                 <version>${redisson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${swagger.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
