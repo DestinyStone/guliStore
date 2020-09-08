@@ -3,6 +3,8 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/gulistore-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gulistore-controller-util" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gulistore-item-controller" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gulistore-item-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gulistore-manager-controller" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gulistore-manager-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gulistore-parent" charset="UTF-8" />

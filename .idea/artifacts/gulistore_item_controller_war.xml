@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="gulistore-item-controller:war">
+    <output-path>$PROJECT_DIR$/gulistore-item-controller/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>gulistore-item-controller</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="gulistore-item-controller-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="gulistore-item-controller:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gulistore.maven.gulistoremanagerservice.mapper.PmsProductSaleAttrMapper">
+
+    <select id="selectBySkuId" resultMap="PmsProductSaleAttrMap">
+        select ppsa.id as id, ppsa.*, ppsav.id as vid, ppsav.*,if(pssav.sku_id, 1, 0) as isChecked from pms_product_sale_attr ppsa
+        left join pms_product_sale_attr_value ppsav
+            on ppsa.product_id = ppsav.product_id and ppsa.sale_attr_id = ppsav.sale_attr_id
+        left join pms_sku_sale_attr_value pssav
+            on ppsav.sale_attr_value_name = pssav.sale_attr_value_name and pssav.sku_id = ${skuId}
+        where ppsa.product_id = (select spu_id from pms_sku_info where id = ${skuId})
+    </select>
+
+    <resultMap id="PmsProductSaleAttrMap" type="bean.PmsProductSaleAttr" autoMapping="true">
+        <id property="id" column="id"/>
+        <collection property="spuSaleAttrValueList" ofType="bean.PmsProductSaleAttrValue" autoMapping="true">
+            <id property="id"  column="vid"/>
+        </collection>
+    </resultMap>
+</mapper>

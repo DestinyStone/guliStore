@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/guliStore.iml" filepath="$PROJECT_DIR$/.idea/guliStore.iml" />
       <module fileurl="file://$PROJECT_DIR$/gulistore-api/gulistore-api.iml" filepath="$PROJECT_DIR$/gulistore-api/gulistore-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/gulistore-controller-util/gulistore-controller-util.iml" filepath="$PROJECT_DIR$/gulistore-controller-util/gulistore-controller-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gulistore-item-controller/gulistore-item-controller.iml" filepath="$PROJECT_DIR$/gulistore-item-controller/gulistore-item-controller.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gulistore-item-service/gulistore-item-service.iml" filepath="$PROJECT_DIR$/gulistore-item-service/gulistore-item-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/gulistore-manager-controller/gulistore-manager-controller.iml" filepath="$PROJECT_DIR$/gulistore-manager-controller/gulistore-manager-controller.iml" />
       <module fileurl="file://$PROJECT_DIR$/gulistore-manager-service/gulistore-manager-service.iml" filepath="$PROJECT_DIR$/gulistore-manager-service/gulistore-manager-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/gulistore-parent/gulistore-parent.iml" filepath="$PROJECT_DIR$/gulistore-parent/gulistore-parent.iml" />
