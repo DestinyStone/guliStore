@@ -1,6 +1,7 @@
 package com.gulistore.maven.gulistoremanagerservice;
 
-import bean.PmsBaseCatalog1;
+import bean.PmsProductSaleAttr;
+import com.alibaba.fastjson.JSONObject;
 import com.gulistore.maven.gulistoremanagerservice.mapper.PmsBaseAttrValueMapper;
 import com.gulistore.maven.gulistoremanagerservice.mapper.PmsBaseCatalog1Mapper;
 import org.junit.jupiter.api.Test;
@@ -21,11 +22,19 @@ public class GulistoreManagerServiceTest {
 
     @Test
     public void aaa() {
-        List<PmsBaseCatalog1> list = new ArrayList<>();
-        PmsBaseCatalog1 zszs = PmsBaseCatalog1.builder().name("zszs").build();
 
-        list.add(zszs);
-        pmsBaseCatalog1Mapper.insertList(list);
+        PmsProductSaleAttr pmsProductSaleAttr = PmsProductSaleAttr.builder().productId(10L).id(20L).saleAttrId(20L).build();
+
+
+        List<PmsProductSaleAttr> pmsProductSaleAttrList = new ArrayList<>();
+        pmsProductSaleAttrList.add(pmsProductSaleAttr);
+
+        String s = JSONObject.toJSONString(pmsProductSaleAttrList);
+
+        System.out.println(s);
+
+        List<PmsProductSaleAttr> pmsProductSaleAttrList1 = JSONObject.parseArray(s, PmsProductSaleAttr.class);
+
 
     }
 }

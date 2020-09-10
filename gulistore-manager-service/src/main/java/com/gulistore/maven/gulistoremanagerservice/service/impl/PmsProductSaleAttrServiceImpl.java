@@ -2,6 +2,7 @@ package com.gulistore.maven.gulistoremanagerservice.service.impl;
 
 import bean.PmsProductSaleAttr;
 import bean.PmsProductSaleAttrValue;
+import com.gulistore.maven.gulistoremanagerservice.cache.annon.EnableCustomRedis;
 import com.gulistore.maven.gulistoremanagerservice.mapper.PmsProductSaleAttrMapper;
 import com.gulistore.maven.gulistoremanagerservice.mapper.PmsProductSaleAttrValueMapper;
 import com.gulistore.maven.gulistoremanagerservice.mapper.PmsSkuSaleAttrValueMapper;
@@ -36,10 +37,10 @@ public class PmsProductSaleAttrServiceImpl implements PmsProductSaleAttrService 
         return pmsProductSaleAttrList;
     }
 
+    @EnableCustomRedis
     @Override
     public List<PmsProductSaleAttr> getSpuSaleAttrAndAllList(Long skuId) {
         List<PmsProductSaleAttr> pmsProductSaleAttrList = pmsProductSaleAttrMapper.selectBySkuId(skuId);
-
         return pmsProductSaleAttrList;
     }
 
