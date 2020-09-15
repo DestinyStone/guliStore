@@ -8,6 +8,8 @@
     <file url="file://$PROJECT_DIR$/gulistore-manager-controller" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gulistore-manager-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gulistore-parent" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gulistore-search-controller" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gulistore-search-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gulistore-service-util" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gulistore-util" charset="UTF-8" />
   </component>

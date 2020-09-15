@@ -7,11 +7,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="gulistore-api" />
-        <module name="gulistore-item-service" />
         <module name="gulistore-manager-controller" />
+        <module name="gulistore-search-service" />
         <module name="gulistore-manager-service" />
+        <module name="gulistore-search-controller" />
         <module name="gulistore-item-controller" />
+        <module name="gulistore-item-service" />
+        <module name="gulistore-api" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -22,6 +24,8 @@
       <module name="gulistore-manager-controller" target="1.8" />
       <module name="gulistore-manager-service" target="1.8" />
       <module name="gulistore-parent" target="1.8" />
+      <module name="gulistore-search-controller" target="1.8" />
+      <module name="gulistore-search-service" target="1.8" />
       <module name="gulistore-service-util" target="1.8" />
       <module name="gulistore-util" target="1.8" />
     </bytecodeTargetLevel>
@@ -34,6 +38,8 @@
       <module name="gulistore-item-service" options="-parameters" />
       <module name="gulistore-manager-controller" options="-parameters" />
       <module name="gulistore-manager-service" options="-parameters" />
+      <module name="gulistore-search-controller" options="-parameters" />
+      <module name="gulistore-search-service" options="-parameters" />
       <module name="gulistore-service-util" options="-parameters" />
       <module name="gulistore-util" options="-parameters" />
     </option>

@@ -8,4 +8,6 @@ public interface PmsBaseAttrInfoService {
     List<PmsBaseAttrInfo> getAttrInfoListByCatalog3Id(Long id);
 
     String saveAttrInfo(PmsBaseAttrInfo pmsBaseAttrInfo);
+
+    List<PmsBaseAttrInfo> selectByValueId(Long[] valueIds);
 }

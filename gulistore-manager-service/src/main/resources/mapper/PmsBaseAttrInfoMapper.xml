@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gulistore.maven.gulistoremanagerservice.mapper.PmsBaseAttrInfoMapper">
+
+
+    <select id="selectByValueIds" resultMap="PmsBaseAttrInfoMap">
+        select pbai.id as pid, pbav.id as vid, pbai.*, pbav.* from pms_base_attr_info pbai
+        left join pms_base_attr_value pbav
+        on pbai.id = pbav.attr_id
+        where pbav.id in
+        <foreach item="id" collection="valueIds" open="(" close=")" separator=",">
+            ${id}
+        </foreach>
+    </select>
+    <resultMap id="PmsBaseAttrInfoMap" type="bean.PmsBaseAttrInfo" autoMapping="true">
+        <id column="pid" property="id"/>
+        <collection property="attrValueList" ofType="bean.PmsBaseAttrValue" autoMapping="true">
+            <id column="vid" property="id"/>
+        </collection>
+    </resultMap>
+</mapper>

@@ -30,5 +30,4 @@ public class PmsSkuAttrValue implements Serializable {
 
   @Column
   private Long skuId;
-
 }

@@ -10,6 +10,8 @@
       <module fileurl="file://$PROJECT_DIR$/gulistore-manager-controller/gulistore-manager-controller.iml" filepath="$PROJECT_DIR$/gulistore-manager-controller/gulistore-manager-controller.iml" />
       <module fileurl="file://$PROJECT_DIR$/gulistore-manager-service/gulistore-manager-service.iml" filepath="$PROJECT_DIR$/gulistore-manager-service/gulistore-manager-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/gulistore-parent/gulistore-parent.iml" filepath="$PROJECT_DIR$/gulistore-parent/gulistore-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gulistore-search-controller/gulistore-search-controller.iml" filepath="$PROJECT_DIR$/gulistore-search-controller/gulistore-search-controller.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gulistore-search-service/gulistore-search-service.iml" filepath="$PROJECT_DIR$/gulistore-search-service/gulistore-search-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/gulistore-service-util/gulistore-service-util.iml" filepath="$PROJECT_DIR$/gulistore-service-util/gulistore-service-util.iml" />
       <module fileurl="file://$PROJECT_DIR$/gulistore-util/gulistore-util.iml" filepath="$PROJECT_DIR$/gulistore-util/gulistore-util.iml" />
     </modules>

@@ -1,8 +1,10 @@
 package com.gulistore.maven.gulistoremanagerservice.service.impl;
 
+import bean.PmsSkuAttrValue;
 import bean.PmsSkuImage;
 import bean.PmsSkuInfo;
 import bean.PmsSkuSaleAttrValue;
+import com.gulistore.maven.gulistoremanagerservice.mapper.PmsSkuAttrValueMapper;
 import com.gulistore.maven.gulistoremanagerservice.mapper.PmsSkuImageMapper;
 import com.gulistore.maven.gulistoremanagerservice.mapper.PmsSkuInfoMapper;
 import com.gulistore.maven.gulistoremanagerservice.mapper.PmsSkuSaleAttrValueMapper;
@@ -24,6 +26,9 @@ public class PmsSkuInfoServiceImpl implements PmsSkuInfoService {
     @Autowired
     private PmsSkuSaleAttrValueMapper pmsSkuSaleAttrValueMapper;
 
+    @Autowired
+    private PmsSkuAttrValueMapper pmsSkuAttrValueMapper;
+
     @Override
     public String insertPmsSkuInfo(PmsSkuInfo pmsSkuInfo) {
         try {
@@ -31,10 +36,11 @@ public class PmsSkuInfoServiceImpl implements PmsSkuInfoService {
             pmsSkuInfo.getSkuImageList().stream().forEach(x -> x.setSkuId(pmsSkuInfo.getId()));
             pmsSkuImageMapper.insertList(pmsSkuInfo.getSkuImageList());
 
-            pmsSkuInfo.getSkuSaleAttrValueList().stream().forEach(x -> {
-                x.setSkuId(pmsSkuInfo.getId());
-            });
+            pmsSkuInfo.getSkuSaleAttrValueList().stream().forEach(x -> x.setSkuId(pmsSkuInfo.getId()));
             pmsSkuSaleAttrValueMapper.insertList(pmsSkuInfo.getSkuSaleAttrValueList());
+
+            pmsSkuInfo.getSkuAttrValueList().forEach(x -> x.setSkuId(pmsSkuInfo.getId()));
+            pmsSkuAttrValueMapper.insertList(pmsSkuInfo.getSkuAttrValueList());
 
             return "true";
         }catch (Exception e) {
@@ -60,5 +66,16 @@ public class PmsSkuInfoServiceImpl implements PmsSkuInfoService {
         pmsSkuInfo.setSkuSaleAttrValueList(pmsSkuSaleAttrValueList);
 
         return pmsSkuInfo;
+    }
+
+    @Override
+    public List<PmsSkuInfo> selectAll() {
+        List<PmsSkuInfo> pmsSkuInfoList = pmsSkuInfoMapper.selectAll();
+        pmsSkuInfoList.forEach(x -> {
+            PmsSkuAttrValue pmsSkuAttrValueQuery = PmsSkuAttrValue.builder().skuId(x.getId()).build();
+            List<PmsSkuAttrValue> pmsSkuAttrValueList = pmsSkuAttrValueMapper.select(pmsSkuAttrValueQuery);
+            x.setSkuAttrValueList(pmsSkuAttrValueList);
+        });
+        return pmsSkuInfoList;
     }
 }

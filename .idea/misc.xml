@@ -5,6 +5,8 @@
     <file type="web" url="file://$PROJECT_DIR$/gulistore-item-service" />
     <file type="web" url="file://$PROJECT_DIR$/gulistore-manager-controller" />
     <file type="web" url="file://$PROJECT_DIR$/gulistore-manager-service" />
+    <file type="web" url="file://$PROJECT_DIR$/gulistore-search-controller" />
+    <file type="web" url="file://$PROJECT_DIR$/gulistore-search-service" />
   </component>
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
@@ -19,6 +21,8 @@
         <option value="$PROJECT_DIR$/gulistore-util/pom.xml" />
         <option value="$PROJECT_DIR$/gulistore-item-controller/pom.xml" />
         <option value="$PROJECT_DIR$/gulistore-item-service/pom.xml" />
+        <option value="$PROJECT_DIR$/gulistore-search-controller/pom.xml" />
+        <option value="$PROJECT_DIR$/gulistore-search-service/pom.xml" />
       </list>
     </option>
   </component>

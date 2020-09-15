@@ -22,9 +22,16 @@ public class PmsBaseAttrInfoServiceImpl implements PmsBaseAttrInfoService {
     private PmsBaseAttrValueMapper pmsBaseAttrValueMapper;
 
     @Override
-    public List<PmsBaseAttrInfo> getAttrInfoListByCatalog3Id(Long id) {
-        PmsBaseAttrInfo pmsBaseAttrInfo = PmsBaseAttrInfo.builder().catalog3Id(id).build();
-        return pmsBaseAttrInfoMapper.select(pmsBaseAttrInfo);
+    public List<PmsBaseAttrInfo> getAttrInfoListByCatalog3Id(Long Catalog3Id) {
+        PmsBaseAttrInfo pmsBaseAttrInfoQuery = PmsBaseAttrInfo.builder().catalog3Id(Catalog3Id).build();
+        List<PmsBaseAttrInfo> pmsBaseAttrInfoList = pmsBaseAttrInfoMapper.select(pmsBaseAttrInfoQuery);
+        pmsBaseAttrInfoList.stream().forEach(pmsBaseAttrInfo -> {
+            PmsBaseAttrValue pmsBaseAttrValue = PmsBaseAttrValue.builder().attrId(pmsBaseAttrInfo.getId()).build();
+            List<PmsBaseAttrValue> pmsBaseAttrValueList = pmsBaseAttrValueMapper.select(pmsBaseAttrValue);
+            pmsBaseAttrInfo.setAttrValueList(pmsBaseAttrValueList);
+        });
+
+        return pmsBaseAttrInfoList;
     }
 
     @Override
@@ -51,5 +58,12 @@ public class PmsBaseAttrInfoServiceImpl implements PmsBaseAttrInfoService {
 
         }
         return "error";
+    }
+
+    @Override
+    public List<PmsBaseAttrInfo> selectByValueId(Long[] valueIds) {
+        if (valueIds ==null) return null;
+        List<PmsBaseAttrInfo> pmsBaseAttrInfoList = pmsBaseAttrInfoMapper.selectByValueIds(valueIds);
+        return pmsBaseAttrInfoList;
     }
 }

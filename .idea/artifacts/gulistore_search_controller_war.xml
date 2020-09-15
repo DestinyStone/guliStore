@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="gulistore-search-controller:war">
+    <output-path>$PROJECT_DIR$/gulistore-search-controller/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>gulistore-search-controller</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="gulistore-search-controller-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="gulistore-search-controller:war exploded" />
+    </root>
+  </artifact>
+</component>
